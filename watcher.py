@@ -13,6 +13,12 @@ from email.message import EmailMessage
 # Discord integration removed as per user request
 # WEBHOOK_URL = os.environ.get("DISCORD_WEBHOOK_URL")
 
+# 2. Define the Microsoft Jobs URL with your specific filters.
+TARGET_URL = "https://apply.careers.microsoft.com/careers?domain=microsoft.com&hl=en&start=0&location=United+States&pid=1970393556659104&sort_by=timestamp&filter_include_remote=1&filter_profession=software+engineering&filter_seniority=Entry%2CMid-Level"
+
+# Titles we care about
+TARGET_TITLES = ["software engineer", "software engineer ii"]
+
 def send_email_notification(job):
     # Credentials from Environment Variables
     EMAIL_ADDRESS = os.environ.get("EMAIL_USER")
