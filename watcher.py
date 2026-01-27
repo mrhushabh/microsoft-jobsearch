@@ -42,6 +42,8 @@ def send_email_notification(job):
     except Exception as e:
         print(f"[!] Email failed: {e}")
 
+DB_FILE = 'seen_jobs.json'
+
 def load_seen_jobs():
     if not os.path.exists(DB_FILE):
         return []
